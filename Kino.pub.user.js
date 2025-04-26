@@ -14,19 +14,11 @@
   const isSerial = !!stage
 
   function createPlaylistSelect({ container, stage }) {
-    const prevSelect = document.getElementById(selectId)
-    if (prevSelect) {
-      prevSelect.remove()
-    }
+    const prevLinks = document.querySelectorAll('.iina')
+    prevLinks.forEach(link => {
+        link.remove(); // Removes the element from the DOM
+    });
 
-    const select = document.createElement('select');
-    select.id = selectId
-
-    // Добавляем placeholder опцию
-    const defaultOpt = document.createElement('option');
-    defaultOpt.value = '';
-    defaultOpt.textContent = 'Выберите файл';
-    select.appendChild(defaultOpt);
 
     if (isSerial) {
       window.playlist.forEach((item, i) => {
