@@ -3,7 +3,6 @@
 @namespace   https://github.com/Seigiard
 @version     0.0.1
 @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Kino.pub.user.css
-@match       https://kino.pub
 ==/UserStyle== */
 
 @-moz-document domain("kino.pub") {

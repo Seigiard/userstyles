@@ -1,0 +1,53 @@
+/* ==UserStyle==
+@name        Vas3k.club
+@namespace   https://github.com/Seigiard
+@version     0.0.1
+@updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Vas3k.club.user.css
+==/UserStyle== */
+
+@-moz-document domain("vas3k.club") {
+  @media print {
+    .menu.menu-full,
+    .post-header :not(.post-title),
+    .upvote,
+    .post-footer,
+    .linked-posts,
+    .post-comments-subscription,
+    .post-comments-order,
+    .comment-footer,
+    .comment-footer-button,
+    .post-comments-form,
+    .post-comments-rules,
+    .footer,
+    .comment-scroll-arrow-wrapper,
+    .non-existing-element {
+      display: none;
+    }
+
+    .content,
+    .post {
+      margin: auto;
+      max-width: 100%;
+    }
+    .comment {
+      padding-inline: 0;
+    }
+    .clearfix20 {
+      height: 1px;
+    }
+    .post-type-post .post-header {
+      text-align: left;
+    }
+
+    body {
+      font-size: 13px;
+    }
+    .text-body-type-post  {
+      font-size: 125%;
+    }
+
+    img {
+      max-block-size: 50vh;
+    }
+  }
+}

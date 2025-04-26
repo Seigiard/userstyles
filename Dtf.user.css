@@ -1,0 +1,115 @@
+/* ==UserStyle==
+@name           Dtf
+@namespace   https://github.com/Seigiard
+@version        0.1
+@updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Dtf.user.css
+@preprocessor	stylus
+==/UserStyle== */
+
+@-moz-document domain("dtf.ru")
+{
+    .andropov-media[style*="max-width: 592px"]
+    {
+        max-width: none !important;
+    }
+
+    .sidebar
+    {
+        scrollbar-width: thin;
+        scrollbar-color: var(--scrollbar-color) transparent !important;
+    }
+
+
+    /* Правая панель */
+    .aside.aside--right
+    {
+        display: none;
+    }
+
+    /* Cсылки 'О проекте', 'Правила' и т.д. */
+    .sidebar__section:last-child
+    {
+        display: none;
+    }
+
+    /* Реклама Plus */
+    .popover:has(.reaction-plus-restriction),
+    .distribution,
+    .comments-limit__expand-always,
+    .supbar--top,
+    .account-menu__group:last-child,
+    div[style$=" 32px;"],
+    div[style$=" 64px;"],
+    .rotator
+    {
+        display: none !important;
+    }
+
+    /* Hide all reactions except heart */
+    .reactions .reaction-button:not(:first-child),
+    .reactions .reaction-button:has(.icon--reaction_add){
+        display: none;
+    }
+
+    .reaction-button {
+        background: transparent;
+    }
+
+    .content__floating
+    {
+        display: none;
+    }
+
+    .content__reactions
+    {
+        align-self: center;
+        padding: 0 0 0 var(--layout-content-offset-x);
+    }
+
+    .content,
+    .comment__content
+    {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .comment__text
+    {
+        margin: 0;
+    }
+
+    .content > div,
+    .comment__content > div
+    {
+        grid-column: span 2;
+    }
+
+    .content__reactions,
+    .content-footer,
+    .comment__reactions,
+    .comment__actions
+    {
+        grid-column: span 1 !important;
+    }
+
+    .content__reactions,
+    .content-footer
+    {
+        margin-top: 6px;
+    }
+
+    .comment__actions
+    {
+        margin-left: 30px;
+    }
+
+    .content-footer {
+        padding-left: calc(var(--offset-x) / 2)
+    }
+
+    .content-footer__item > div,
+    .content-views__icon
+    {
+        background-color: transparent !important;
+    }
+}
