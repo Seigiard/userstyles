@@ -2,7 +2,7 @@
 @name        Rezka.ag
 @namespace   https://github.com/Seigiard
 @version     0.0.1
-@updateURL   https://github.com/Seigiard/my-mac-setup/raw/refs/heads/main/browsers/userscripts/Rezka.ag.user.css
+@updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Rezka.ag.user.css
 @match       https://rezka.ag/*
 @match       https://hdrezka.ag/*
 ==/UserStyle== */
