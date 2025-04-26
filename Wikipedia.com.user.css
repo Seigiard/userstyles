@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name        Wikipedia.com
 @namespace   https://github.com/Seigiard
-@version     0.0.1
+@version     0.0.2
 @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Wikipedia.com.user.css
 ==/UserStyle== */
 
-@-moz-document domain("wikipedia.com") {
+@-moz-document domain("wikipedia.com"), domain("wikipedia.org") {
   body {
     --font-size-medium:1rem;
     --line-height-medium:1.75;
