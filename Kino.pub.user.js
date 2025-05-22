@@ -2,7 +2,7 @@
 // @name        Kino.pub
 // @namespace   Violentmonkey Scripts
 // @grant       none
-// @version     0.0.1
+// @version     0.0.2
 // @match       https://kino.pub/item/view/*
 // @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Kino.pub.user.js
 // ==/UserScript==
@@ -25,6 +25,11 @@
         const el = document.querySelector(`#media-${item.id} .media-holder`)
         const link = getIinaLink(item.file, '▶️')
         el.append(link)
+      })
+
+      const lastWatchedEpisode = Array.from(document.querySelectorAll('.owl-stage .owl-item:has(a.darken)')).pop();
+      lastWatchedEpisode.parentElement.scrollTo({
+        left: lastWatchedEpisode.offsetLeft,
       })
     } else {
       // Добавляем опции из плейлиста
