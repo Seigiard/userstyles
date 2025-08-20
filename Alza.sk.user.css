@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name        Habr.com
+@namespace   https://github.com/Seigiard
+@version     0.0.1
+@updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Alza.sk.user.css
+
+==/UserStyle== */
+@-moz-document domain("alza.sk") {
+  body {
+    zoom: 1.1;
+  }
+
+  #page {
+    width: 100% !important;
+  }
+
+  #page>*:not(#content0c) {
+    display: none;
+  }
+}
