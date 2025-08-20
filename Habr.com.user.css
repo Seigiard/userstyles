@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name        Habr.com
+@namespace   https://github.com/Seigiard
+@version     0.0.1
+@updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Habr.com.user.css
+
+==/UserStyle== */
+@-moz-document domain("habr.com") {
+  body {
+    zoom: 1.1;
+  }
+
+  .tm-header,
+  .tm-base-layout__header,
+  .tm-article-snippet__stats,
+  .tm-page__sidebar,
+  .tm-project-block_variant-vacancies,
+  .tm-footer-menu,
+  .tm-footer,
+  .just-for-dev {
+    display: none;
+  }
+}

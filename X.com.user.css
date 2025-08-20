@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name        Habr.com
+@namespace   https://github.com/Seigiard
+@version     0.0.1
+@updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/X.com.user.css
+
+==/UserStyle== */
+@-moz-document domain("x.com") {
+  body {
+    zoom: 1.1;
+  }
+
+  [data-testid="sidebarColumn"],
+  [data-testid="DMDrawer"],
+  [data-testid="GrokDrawer"] {
+    display: none;
+  }
+}
