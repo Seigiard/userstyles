@@ -1,0 +1,75 @@
+/* ==UserStyle==
+@name        Small bits
+@namespace   https://github.com/Seigiard
+@version     0.0.1
+@updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Bits.user.css
+
+==/UserStyle== */
+@-moz-document domain("alza.sk") {
+  body {
+    zoom: 1.1;
+  }
+
+  #page {
+    width: 100% !important;
+  }
+
+  #page>*:not(#content0c) {
+    display: none;
+  }
+}
+
+@-moz-document domain("x.com") {
+  body {
+    zoom: 1.1;
+  }
+
+  [data-testid="sidebarColumn"],
+  [data-testid="DMDrawer"],
+  [data-testid="GrokDrawer"] {
+    display: none;
+  }
+
+  [role="main"] {
+      min-width: 0
+  }
+  [role="main"] > div {
+      max-width: 100%
+  }
+}
+
+@-moz-document domain("habr.com") {
+  body {
+    zoom: 1.1;
+  }
+
+  .tm-header,
+  .tm-base-layout__header,
+  .tm-article-snippet__stats,
+  .tm-page__sidebar,
+  .tm-project-block_variant-vacancies,
+  .tm-footer-menu,
+  .tm-footer,
+  .just-for-dev {
+    display: none;
+  }
+}
+
+@-moz-document domain("wikipedia.com"), domain("wikipedia.org") {
+  body {
+    --font-size-medium:1rem;
+    --line-height-medium:1.75;
+    font-family: system-ui, sans-serif;
+  }
+
+  .mw-body h1, .mw-body .mw-heading1, .mw-body-content h1, .mw-body-content .mw-heading1, .mw-body-content h2, .mw-body-content .mw-heading2 {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+  }
+  .mw-body h1, .mw-body .mw-heading1, .mw-body-content h1, .mw-body-content .mw-heading1 {
+    font-size: 2rem;
+  }
+
+  .vector-user-links {
+    display: none;
+  }
+}
