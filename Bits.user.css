@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Small bits
 @namespace   https://github.com/Seigiard
-@version     0.0.1
+@version     0.0.2
 @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Bits.user.css
 
 ==/UserStyle== */
@@ -26,6 +26,14 @@
 
   [data-testid="sidebarColumn"],
   [data-testid="DMDrawer"],
+  a[href="/i/grok"],
+  a[href="/seigiard/lists"],
+  a[href="/jobs"],
+  a[href="/seigiard/communities"],
+  [data-testid="premium-signup-tab"],
+  [data-testid="vo-signup-tab"],
+  [data-testid="AppTabBar_More_Menu"],
+  [data-testid="AppTabBar_Explore_Link"],
   [data-testid="GrokDrawer"] {
     display: none;
   }
