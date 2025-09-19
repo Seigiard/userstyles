@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Small bits
 @namespace   https://github.com/Seigiard
-@version     0.0.2
+@version     0.0.3
 @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Bits.user.css
 
 ==/UserStyle== */
@@ -20,30 +20,19 @@
 }
 
 @-moz-document domain("x.com") {
-  body {
-    zoom: 1.1;
-  }
-
-  [data-testid="sidebarColumn"],
-  [data-testid="DMDrawer"],
-  a[href="/i/grok"],
-  a[href="/seigiard/lists"],
-  a[href="/jobs"],
-  a[href="/seigiard/communities"],
-  [data-testid="premium-signup-tab"],
-  [data-testid="vo-signup-tab"],
-  [data-testid="AppTabBar_More_Menu"],
-  [data-testid="AppTabBar_Explore_Link"],
-  [data-testid="GrokDrawer"] {
-    display: none;
-  }
-
-  [role="main"] {
-      min-width: 0
-  }
-  [role="main"] > div {
-      max-width: 100%
-  }
+	[data-testid="sidebarColumn"],
+	[data-testid="DMDrawer"],
+	a[href="/i/grok"],
+	a[href="/seigiard/lists"],
+	a[href="/jobs"],
+	a[href="/seigiard/communities"],
+	[data-testid="premium-signup-tab"],
+	[data-testid="vo-signup-tab"],
+	[data-testid="AppTabBar_More_Menu"],
+	[data-testid="AppTabBar_Explore_Link"],
+	[data-testid="GrokDrawer"] {
+		display: none;
+	}
 }
 
 @-moz-document domain("habr.com") {
