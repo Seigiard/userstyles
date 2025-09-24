@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Kino.pub
 @namespace   https://github.com/Seigiard
-@version     0.0.2
+@version     0.0.3
 @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Kino.pub.user.css
 ==/UserStyle== */
 
@@ -158,6 +158,11 @@
     h3 .iina {
         float: right;
     }
+	h3 button {
+        float: right;
+		border: none;
+		background: transparent;
+    }
 
     .nav-active-success:has(> .nav-tabs),
     .nav-active-success:has(> .nav-tabs) + .tab-content .lead {
@@ -256,4 +261,13 @@
     .portfolio-list .item .media-holder a.iina:hover {
         transform: scale(1);
     }
+
+	body[data-theater].dark .bg,
+	body[data-theater].dark .lt,
+	body[data-theater] .app-body{
+		background: #000;
+	}
+	body[data-theater] .padding > :not(.mediaplayer) {
+		opacity: 0.5
+	}
 }

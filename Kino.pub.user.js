@@ -2,7 +2,7 @@
 // @name        Kino.pub
 // @namespace   Violentmonkey Scripts
 // @grant       none
-// @version     0.0.2
+// @version     0.0.3
 // @match       https://kino.pub/item/view/*
 // @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Kino.pub.user.js
 // ==/UserScript==
@@ -56,5 +56,20 @@
   }
 
   function handleChanges() { createPlaylistSelect({ container, stage }); }
+
+  function handleTheaterMode() {
+    var button = document.createElement("button");
+    button.textContent = '🎞️';
+    button.addEventListener('click', () => {
+      if (document.body.hasAttribute('data-theater')) {
+        document.body.removeAttribute('data-theater')
+      } else {
+        document.body.setAttribute('data-theater', true)
+      }
+    })
+    container.appendChild(button);
+  }
+
+  window.addEventListener('load', handleTheaterMode)
   window.addEventListener('load', handleChanges)
 })()
