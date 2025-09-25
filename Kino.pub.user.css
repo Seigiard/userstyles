@@ -4,278 +4,285 @@
 @version     0.0.4
 @updateURL   https://raw.githubusercontent.com/Seigiard/userstyles/refs/heads/main/Kino.pub.user.css
 ==/UserStyle== */
-
 @-moz-document domain("kino.pub") {
-    body {
-        font-family: system-ui, sans-serif;
-    }
+	body {
+		font-family: system-ui, sans-serif;
+	}
 
-    h1,
-    h2,
-    h3 {
-        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-    }
+	h1,
+	h2,
+	h3 {
+		font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+	}
 
-    /* Sidebar */
-    #aside,
-    .app-aside,
-    .app-aside .scroll {
-        width: 28rem;
-    }
+	/* Sidebar */
+	#aside,
+	.app-aside,
+	.app-aside .scroll {
+		width: 28rem;
+	}
 
-    #aside {
-        top: 0;
-        left: 0;
-        bottom: auto;
-        height: 3.5rem;
-    }
+	#aside {
+		top: 0;
+		left: 0;
+		bottom: auto;
+		height: 3.5rem;
+	}
 
-    #aside .navside {
-        position: static;
-        background-color: transparent;
-    }
+	#aside .navside {
+		position: static;
+		background-color: transparent;
+	}
 
-    #aside .navside .navbar {
-        display: none;
-    }
+	#aside .navside .navbar {
+		display: none;
+	}
 
-    #aside .navside .nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        height: 3.5rem;
-    }
+	#aside .navside .nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.5rem;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		height: 3.5rem;
+	}
 
-    #aside .navside .nav li {
-        display: none;
-    }
+	#aside .navside .nav li {
+		display: none;
+	}
 
-    #aside .navside .nav li:nth-child(12),
-    #aside .navside .nav li:nth-child(13),
-    #aside .navside .nav li:nth-child(19) {
-        display: block;
-    }
+	#aside .navside .nav li:nth-child(12),
+	#aside .navside .nav li:nth-child(13),
+	#aside .navside .nav li:nth-child(19) {
+		display: block;
+	}
 
-    #aside .navside .nav li a {
-        display: inline-flex;
-        white-space: nowrap;
-        gap: 0.5rem;
-    }
+	#aside .navside .nav li a {
+		display: inline-flex;
+		white-space: nowrap;
+		gap: 0.5rem;
+	}
 
-    #aside .navside .nav li a > * {
-        all: unset;
-    }
+	#aside .navside .nav li a > * {
+		all: unset;
+	}
 
-    /* Header */
-    .app-header {
-        padding-left: 30rem;
-    }
+	/* Header */
+	.app-header {
+		padding-left: 30rem;
+	}
 
-    /* Content */
-    #content {
-        margin-left: 0;
-        margin-top: 0;
-    }
+	/* Content */
+	#content {
+		margin-left: 0;
+		margin-top: 0;
+	}
 
-    .padding {
-        padding: 2rem 5rem;
-    }
+	.padding {
+		padding: 2rem 5rem;
+	}
 
-    /* Bookmarks */
-    div[id^="favorites-item-"],
-    .card-block {
-        position: relative;
-    }
+	/* Bookmarks */
+	div[id^="favorites-item-"],
+	.card-block {
+		position: relative;
+	}
 
-    div[id^="favorites-item-"] a,
-    .card-block a {
-        z-index: 2;
-        position: relative;
-    }
+	div[id^="favorites-item-"] a,
+	.card-block a {
+		z-index: 2;
+		position: relative;
+	}
 
-    div[id^="favorites-item-"] .item-title a,
-    .card-block h6 a {
-        z-index: 0;
-        position: initial;
-    }
+	div[id^="favorites-item-"] .item-title a,
+	.card-block h6 a {
+		z-index: 0;
+		position: initial;
+	}
 
-    div[id^="favorites-item-"] .item-title a::before,
-    .card-block h6 a::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-    }
+	div[id^="favorites-item-"] .item-title a::before,
+	.card-block h6 a::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+	}
 
-    .episode-number a {
-        display: inline-block;
-        padding: 0.5rem 0.7rem;
-        z-index: 100;
-        text-decoration: underline;
-    }
+	.episode-number a {
+		display: inline-block;
+		padding: 0.5rem 0.7rem;
+		z-index: 100;
+		text-decoration: underline;
+	}
 
-    .episode-number a:hover {
-        text-decoration: none;
-    }
+	.episode-number a:hover {
+		text-decoration: none;
+	}
 
-    /* Main page */
-    #carousel-similar,
-    .util-carousel,
-    .util-wrapper-holder {
-        display: contents;
-    }
-    .util-wrapper {
-        display: flex!important;
-        margin-block-end: 2rem;
-        width: fit-content !important;
-        max-width: 100% !important;
-        overflow: auto;
-        gap: 0.5rem;
-        scroll-snap-type: inline mandatory;
-    }
-    .util-wrapper::before,
-    .util-wrapper::after {
-        content: none!important;
-    }
-    .util-item {
-        height: auto;
-        margin: 0!important;
-        flex: 1;
-        width: auto !important;
-        scroll-snap-align: start;
-    }
-    .util-pagination {
-        display: none!important;
-    }
+	/* Main page */
+	#carousel-similar,
+	.util-carousel,
+	.util-wrapper-holder {
+		display: contents;
+	}
+	.util-wrapper {
+		display: flex!important;
+		margin-block-end: 2rem;
+		width: fit-content !important;
+		max-width: 100% !important;
+		overflow: auto;
+		gap: 0.5rem;
+		scroll-snap-type: inline mandatory;
+	}
+	.util-wrapper::before,
+	.util-wrapper::after {
+		content: none!important;
+	}
+	.util-item {
+		height: auto;
+		margin: 0!important;
+		flex: 1;
+		width: auto !important;
+		scroll-snap-align: start;
+	}
+	.util-pagination {
+		display: none!important;
+	}
 
-    /* Movie page */
-    h3 .iina {
-        float: right;
-    }
+	/* Movie page */
+	h3 .iina {
+		float: right;
+	}
 	h3 button {
-        float: right;
+		float: right;
 		border: none;
 		background: transparent;
-    }
+	}
 
-    .nav-active-success:has(> .nav-tabs),
-    .nav-active-success:has(> .nav-tabs) + .tab-content .lead {
-        display: none;
-    }
+	.nav-active-success:has(> .nav-tabs),
+	.nav-active-success:has(> .nav-tabs) + .tab-content .lead {
+		display: none;
+	}
 
-    .nav-active-success:has(> .nav-tabs) + .tab-content {
-        display: grid;
-        grid-template-areas: "plot audio" "info audio" "trailer trailer";
-        grid-template-columns: 1fr minmax(15rem, 25%);
-        padding: 0;
-    }
+	.nav-active-success:has(> .nav-tabs) + .tab-content {
+		display: grid;
+		grid-template-areas: "plot audio" "info audio" "trailer trailer";
+		grid-template-columns: 1fr minmax(15rem, 25%);
+		padding: 0;
+	}
 
-    #plot {
-        grid-area: plot;
-    }
+	#plot {
+		grid-area: plot;
+	}
 
-    .nav-active-success:has(> .nav-tabs) + .tab-content .table-responsive {
-        grid-area: info;
-    }
+	.nav-active-success:has(> .nav-tabs) + .tab-content .table-responsive {
+		grid-area: info;
+	}
 
-    #trailer {
-        grid-area: trailer;
-    }
+	#trailer {
+		grid-area: trailer;
+	}
 
-    #audio {
-        grid-area: audio;
-        font-size: 0.8rem;
-    }
+	#audio {
+		grid-area: audio;
+		font-size: 0.8rem;
+	}
 
-    .nav-active-success:has(> .nav-tabs) + .tab-content .tab-pane {
-        display: block!important;
-    }
+	.nav-active-success:has(> .nav-tabs) + .tab-content .tab-pane {
+		display: block!important;
+	}
 
-    #my-video:not(.vjs-has-started) {
-        padding: 0;
-        height: 4.5rem;
-    }
+	#my-video:not(.vjs-has-started) {
+		padding: 0;
+		height: 4.5rem;
+	}
 
-    /* Episode list */
-    .owl-dots {
-        display: none;
-    }
-    .owl-carousel,
-    .owl-stage-outer,
-    .portfolio-list .item,
-    .portfolio-list .item .media-holder {
-        display: contents;
-    }
-    .owl-stage {
-        display: flex!important;
-        margin-block-end: 2rem;
-        width: fit-content !important;
-        max-width: 100% !important;
-        overflow: auto;
-        gap: 0.5rem;
-        scroll-snap-type: inline mandatory;
-    }
-    .owl-item {
-        margin: 0!important;
-        height: 10rem;
-        flex: 0 0 15rem;
-        width: 15rem !important;
-        scroll-snap-align: start;
-        position: relative;
-    }
-    .portfolio-list .item .media-holder a:has(.img-responsive) {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-    }
-    .owl-carousel .owl-item img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .portfolio-list .detail-container {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0,0,0,0.4);
-    }
+	/* Episode list */
+	.owl-dots {
+		display: none;
+	}
+	.owl-carousel,
+	.owl-stage-outer,
+	.portfolio-list .item,
+	.portfolio-list .item .media-holder {
+		display: contents;
+	}
+	.owl-stage {
+		display: flex!important;
+		margin-block-end: 2rem;
+		width: fit-content !important;
+		max-width: 100% !important;
+		overflow: auto;
+		gap: 0.5rem;
+		scroll-snap-type: inline mandatory;
+	}
+	.owl-item {
+		margin: 0!important;
+		height: 10rem;
+		flex: 0 0 15rem;
+		width: 15rem !important;
+		scroll-snap-align: start;
+		position: relative;
+	}
+	.portfolio-list .item .media-holder a:has(.img-responsive) {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+	.owl-carousel .owl-item img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.portfolio-list .detail-container {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
 
-    .portfolio-list .item .media-holder a.iina {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-        padding: 0.1rem 0.6rem;
-        font-size: 1.6rem;
-        transform: scale(0.8);
-        transition: transform ease-in-out 0.3s;
-    }
-    .portfolio-list .item .media-holder a.iina:hover {
-        transform: scale(1);
-    }
+	.portfolio-list .item .media-holder a.iina {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		padding: 0.1rem 0.6rem;
+		font-size: 1.6rem;
+		transform: scale(0.8);
+		transition: transform ease-in-out 0.3s;
+	}
+	.portfolio-list .item .media-holder a.iina:hover {
+		transform: scale(1);
+	}
 
+	body[data-theater] {
+		overflow-x: hidden;
+	}
+	body[data-theater].dark,
 	body[data-theater].dark .bg,
 	body[data-theater].dark .lt,
-	body[data-theater] .app-body{
+	body[data-theater] .app-body {
 		background: #000;
 	}
-	body[data-theater] .padding > :not(.mediaplayer) {
-		opacity: 0.5
+
+	body[data-theater] #aside,
+	body[data-theater] .app-header,
+	body[data-theater] .padding > .row:not(.mediaplayer) {
+		display: none!important;
 	}
+
 	body[data-theater] .padding > .mediaplayer {
 		width: 100vw;
 		position: relative;
 		left: 50%;
 		right: 50%;
-		margin-left: -50vw;
-		margin-right: -50vw;
+		margin-inline: -50vw;
+		margin-top: 2rem;
 	}
 }
