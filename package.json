@@ -1,0 +1,12 @@
+{
+  "name": "userstyles",
+  "private": true,
+  "scripts": {
+    "lint:anti-slop": "oxlint --config .oxlintrc.anti-slop.json .",
+    "lint": "npm run lint:anti-slop"
+  },
+  "devDependencies": {
+    "@oxlint/plugins": "1.87.0",
+    "oxlint": "1.87.0"
+  }
+}
