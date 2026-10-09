@@ -1,0 +1,9 @@
+glob_matcher: doublestar
+
+pre-commit:
+  piped: true
+  jobs:
+    - name: format
+      glob: "**/*.{css,js,json,md,yaml,yml}"
+      run: bunx --no-install prettier --write {staged_files}
+      stage_fixed: true
